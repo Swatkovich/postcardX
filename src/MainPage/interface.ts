@@ -53,7 +53,6 @@ export interface SideBarProps extends SideBarState {
 }
 
 export interface TabProps {
-  // handleTabChange: (value: TextAlign) => void;
   value: TextAlign;
 }
 
