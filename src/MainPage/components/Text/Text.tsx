@@ -62,20 +62,11 @@ class Text extends React.PureComponent<TextProps, TextState> {
           lineHeight: this.props.lineHeight,
           letterSpacing: this.props.letterSpacing,
           textAlign: this.props.textAlign,
-
-          // fontFamily: this.state.font,
-          // fontSize: this.state.fontSize,
-          // fontWeight: this.state.fontWeight,
-          // color: this.state.color,
-          // lineHeight: this.state.lineHeight,
-          // letterSpacing: this.state.letterSpacing,
-          // textAlign: this.state.textAlign,
         }}
         spellCheck="false"
         className="text"
         onChange={this.handleTextChange}
         value={this.props.text}
-        // value={this.state.text}
       ></textarea>
     );
   }
