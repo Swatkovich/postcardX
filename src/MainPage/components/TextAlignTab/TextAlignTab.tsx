@@ -37,7 +37,7 @@ class TextAlignTab extends React.PureComponent<TabProps, TabState> {
     super(props);
     this.state = {
       value:
-        (localStorage.getItem('letterSpacing') as TextAlign) ||
+        (localStorage.getItem('textAlign') as TextAlign) ||
         (this.props.value as TextAlign),
     };
   }

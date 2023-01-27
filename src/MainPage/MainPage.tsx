@@ -18,7 +18,7 @@ class MainPage extends React.PureComponent<{}, TextState> {
     super(props);
     this.state = {
       text: 'Type Here...',
-      font: 'Fira Sasns',
+      font: 'Fira Sans',
       fontSize: '14px',
       fontWeight: 'Bold',
       color: '#292929',
@@ -32,39 +32,45 @@ class MainPage extends React.PureComponent<{}, TextState> {
     const localStorageObject = Object.assign({}, localStorage);
     if (localStorageObject.text) {
       this.setState({ text: localStorageObject.text });
+    } else {
+      localStorage.setItem('text', this.state.text);
     }
     if (localStorageObject.font) {
       this.setState({ font: localStorageObject.font });
+    } else {
+      localStorage.setItem('font', this.state.font);
     }
     if (localStorageObject.fontSize) {
       this.setState({ fontSize: localStorageObject.fontSize });
+    } else {
+      localStorage.setItem('fontSize', this.state.fontSize);
     }
     if (localStorageObject.fontWeight) {
       this.setState({ fontWeight: localStorageObject.fontWeight });
+    } else {
+      localStorage.setItem('fontWeight', this.state.fontWeight);
     }
     if (localStorageObject.color) {
       this.setState({ color: localStorageObject.color });
+    } else {
+      localStorage.setItem('color', this.state.color);
     }
     if (localStorageObject.lineHeight) {
       this.setState({ lineHeight: localStorageObject.lineHeight });
+    } else {
+      localStorage.setItem('lineHeight', this.state.lineHeight);
     }
     if (localStorageObject.letterSpacing) {
       this.setState({ letterSpacing: localStorageObject.letterSpacing });
+    } else {
+      localStorage.setItem('letterSpacing', this.state.letterSpacing);
     }
     if (localStorageObject.textAlign) {
       this.setState({ textAlign: localStorageObject.textAlign });
+    } else {
+      localStorage.setItem('textAlign', this.state.textAlign);
     }
   }
-
-  handleChange =
-    () => (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-      const { name, value } = event.target;
-      localStorage.setItem(name, value);
-    };
-
-  handleTabChange = (value: TextAlign) => {
-    localStorage.setItem('textAlign', value);
-  };
 
   handleApply = () => {
     this.setState({ font: localStorage.getItem('font') as string });
@@ -101,8 +107,6 @@ class MainPage extends React.PureComponent<{}, TextState> {
           lineHeight={this.state.lineHeight}
           letterSpacing={this.state.letterSpacing}
           textAlign={this.state.textAlign}
-          handleChange={this.handleChange}
-          handleTabChange={this.handleTabChange}
           handleApply={this.handleApply}
         />
       </StyledMainPage>

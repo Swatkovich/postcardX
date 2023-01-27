@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type TextAlign =
   | 'start'
   | 'end'
@@ -26,9 +24,7 @@ export interface InputProps {
   value: string;
 }
 
-export interface InputState {
-  value: string;
-}
+export interface InputState extends InputProps {}
 
 export interface SubmitProps {
   handleApply: () => void;
@@ -45,10 +41,6 @@ export interface SideBarState {
 }
 
 export interface SideBarProps extends SideBarState {
-  handleChange: (
-    event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
-  ) => void;
-  handleTabChange: (value: TextAlign) => void;
   handleApply: () => void;
 }
 
@@ -56,6 +48,4 @@ export interface TabProps {
   value: TextAlign;
 }
 
-export interface TabState {
-  value: TextAlign;
-}
+export interface TabState extends TabProps {}
