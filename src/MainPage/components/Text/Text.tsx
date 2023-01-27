@@ -67,7 +67,7 @@ class Text extends React.PureComponent<TextProps, TextState> {
         spellCheck="false"
         className="text"
         onChange={this.handleTextChange}
-        value={this.props.text}
+        value={this.state.text}
       ></textarea>
     );
   }
