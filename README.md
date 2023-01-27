@@ -1,6 +1,6 @@
 # Introduction:
 
-This task is made for designmodo
+This task is made for designmodo<br>
 Technologies used:
 
 - JS
