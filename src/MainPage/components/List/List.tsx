@@ -9,6 +9,8 @@ const StyledList = styled.div`
   width: 600px;
   background-color: #ffffff;
   padding: 30px;
+  border-radius: 1px;
+  box-sizing: border-box;
 `;
 
 export class List extends React.PureComponent<TextState, TextProps> {

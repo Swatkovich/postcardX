@@ -5,7 +5,16 @@ import { InputProps, InputState } from '../../interface';
 
 const StyledLineHeightInput = styled.input`
   background-color: #ffffff;
-  width: 100%; ;
+  height: 40px;
+  width: 50%;
+  border-radius: 4p 0 0 4px;
+  border: 1px solid #e8ecf0;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 400;
+  font-family: Fira Sans;
+  margin-right: -1px;
 `;
 
 class LineHeightInput extends React.PureComponent<InputProps, InputState> {

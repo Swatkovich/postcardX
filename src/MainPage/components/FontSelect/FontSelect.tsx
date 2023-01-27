@@ -13,6 +13,7 @@ const StyledFontSelect = styled.select`
   line-height: 14.4px;
   font-weight: 400;
   font-family: Fira Sans;
+  margin-bottom: 10px;
 `;
 
 class FontSelect extends React.PureComponent<InputProps, InputState> {

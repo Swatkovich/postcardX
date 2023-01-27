@@ -5,7 +5,15 @@ import { InputProps, InputState } from '../../interface';
 
 const StyledFontSizeInput = styled.input`
   background-color: #ffffff;
-  width: 100%; ;
+  height: 40px;
+  width: 74px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #e8ecf0;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 400;
+  font-family: Fira Sans;
 `;
 
 class FontSizeInput extends React.PureComponent<InputProps, InputState> {

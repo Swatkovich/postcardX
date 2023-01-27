@@ -19,7 +19,7 @@ class MainPage extends React.PureComponent<{}, TextState> {
     this.state = {
       text: 'Type Here...',
       font: 'Fira Sans',
-      fontSize: '14px',
+      fontSize: '14',
       fontWeight: 'Bold',
       color: '#292929',
       lineHeight: '125%',

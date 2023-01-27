@@ -5,7 +5,15 @@ import { InputProps, InputState } from '../../interface';
 
 const StyledColorSelect = styled.select`
   background-color: #ffffff;
-  width: 100%; ;
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #e8ecf0;
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 400;
+  font-family: Fira Sans;
+  margin-bottom: 10px;
 `;
 
 class ColorSelect extends React.PureComponent<InputProps, InputState> {

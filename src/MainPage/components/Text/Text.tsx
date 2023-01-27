@@ -56,12 +56,13 @@ class Text extends React.PureComponent<TextProps, TextState> {
       <textarea
         style={{
           fontFamily: this.props.font,
-          fontSize: this.props.fontSize,
+          fontSize: `${this.props.fontSize}px`,
           fontWeight: this.props.fontWeight,
           color: this.props.color,
           lineHeight: this.props.lineHeight,
           letterSpacing: this.props.letterSpacing,
           textAlign: this.props.textAlign,
+          resize: 'none',
         }}
         spellCheck="false"
         className="text"
