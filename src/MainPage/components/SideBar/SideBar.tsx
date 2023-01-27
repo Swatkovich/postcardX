@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import ColorSelect from '../ColorSelect';
 import FontSelect from '../FontSelect';
-// import { FontReactSelect } from '../FontSelect/FontReactSelect';
 import FontSizeInput from '../FontSizeInput';
 import FontWeightSelect from '../FontWeightSelect';
 import LineHeightInput from '../LineHeightInput';
@@ -48,22 +47,11 @@ const StyledSideBar = styled.div`
 `;
 
 class SideBar extends React.PureComponent<SideBarProps, SideBarState> {
-  handleSave = () => {
-    localStorage.setItem('font', this.props.font);
-    localStorage.setItem('fontSize', this.props.fontSize.toString());
-    localStorage.setItem('fontWeight', this.props.fontWeight);
-    localStorage.setItem('color', this.props.color);
-    localStorage.setItem('lineHeight', this.props.lineHeight.toString());
-    localStorage.setItem('letterSpacing', this.props.letterSpacing.toString());
-    localStorage.setItem('textAlign', this.props.textAlign);
-  };
-
   render() {
     return (
       <StyledSideBar>
         <div className="header">TEXT</div>
         <FontSelect value={this.props.font} />
-        {/* <FontReactSelect /> */}
         <div className="weight-size_container">
           <FontWeightSelect value={this.props.fontWeight} />
           <FontSizeInput value={this.props.fontSize} />
