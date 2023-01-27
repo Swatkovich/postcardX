@@ -1,7 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ReactComponent as VectorIcon } from '../../../assets/svg/vector.svg';
+
 import { InputProps, InputState } from '../../interface';
+
+const StyledFontSelectContainer = styled.div`
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  margin-bottom: 10px;
+`;
 
 const StyledFontSelect = styled.select`
   background-color: #ffffff;
@@ -13,7 +22,9 @@ const StyledFontSelect = styled.select`
   line-height: 14.4px;
   font-weight: 400;
   font-family: Fira Sans;
-  margin-bottom: 10px;
+  padding-left: 14px;
+  padding-bottom: 1px;
+  -webkit-appearance: none;
 `;
 
 class FontSelect extends React.PureComponent<InputProps, InputState> {
@@ -31,14 +42,24 @@ class FontSelect extends React.PureComponent<InputProps, InputState> {
 
   render() {
     return (
-      <StyledFontSelect
-        value={this.state.value}
-        name="font"
-        onChange={this.handleSelectChange}
-      >
-        <option value="Fira Sans">Fira Sans</option>
-        <option value="Segoe UI">Segoe UI</option>
-      </StyledFontSelect>
+      <StyledFontSelectContainer>
+        <StyledFontSelect
+          value={this.state.value}
+          name="font"
+          onChange={this.handleSelectChange}
+        >
+          <option value="Fira Sans">Fira Sans</option>
+          <option value="Segoe UI">Segoe UI</option>
+        </StyledFontSelect>
+        <VectorIcon
+          style={{
+            position: 'relative',
+            top: '17px',
+            right: '10px',
+            marginLeft: '-9px',
+          }}
+        />
+      </StyledFontSelectContainer>
     );
   }
 }

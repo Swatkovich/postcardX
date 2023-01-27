@@ -59,8 +59,8 @@ class Text extends React.PureComponent<TextProps, TextState> {
           fontSize: `${this.props.fontSize}px`,
           fontWeight: this.props.fontWeight,
           color: this.props.color,
-          lineHeight: this.props.lineHeight,
-          letterSpacing: this.props.letterSpacing,
+          lineHeight: `${this.props.lineHeight}%`,
+          letterSpacing: `${this.props.letterSpacing}px`,
           textAlign: this.props.textAlign,
           resize: 'none',
         }}

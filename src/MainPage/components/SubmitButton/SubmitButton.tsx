@@ -11,6 +11,8 @@ const StyledSubmitButton = styled.button`
   border: none;
   border-radius: 4px;
   font-family: Fira sans;
+  font-size: 13px;
+  padding-top: 0px;
 
   &:hover {
     background-color: #1f8b4c;

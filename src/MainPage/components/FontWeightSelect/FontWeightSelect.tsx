@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ReactComponent as VectorIcon } from '../../../assets/svg/vector.svg';
+
 import { InputProps, InputState } from '../../interface';
 
 const StyledFontWeightSelect = styled.select`
   background-color: #ffffff;
   height: 40px;
-  width: 133px;
+  width: 135px;
   border-radius: 4px 0 0 4px;
   border: 1px solid #e8ecf0;
   font-size: 12px;
@@ -14,6 +16,9 @@ const StyledFontWeightSelect = styled.select`
   font-weight: 400;
   font-family: Fira Sans;
   margin-right: -1px;
+  padding-left: 14px;
+  padding-bottom: 1px;
+  -webkit-appearance: none;
 `;
 
 class FontWeightSelect extends React.PureComponent<InputProps, InputState> {
@@ -31,14 +36,24 @@ class FontWeightSelect extends React.PureComponent<InputProps, InputState> {
 
   render() {
     return (
-      <StyledFontWeightSelect
-        value={this.state.value}
-        name="fontWeight"
-        onChange={this.handleSelectChange}
-      >
-        <option value="Bold">Bold</option>
-        <option value="Normal">Normal</option>
-      </StyledFontWeightSelect>
+      <>
+        <StyledFontWeightSelect
+          value={this.state.value}
+          name="fontWeight"
+          onChange={this.handleSelectChange}
+        >
+          <option value="Bold">Bold</option>
+          <option value="Normal">Normal</option>
+        </StyledFontWeightSelect>
+        <VectorIcon
+          style={{
+            position: 'relative',
+            top: '18px',
+            right: '11px',
+            marginLeft: '-9px',
+          }}
+        />
+      </>
     );
   }
 }

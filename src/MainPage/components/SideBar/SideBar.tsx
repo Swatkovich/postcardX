@@ -30,7 +30,7 @@ const StyledSideBar = styled.div`
     font-weight: 600;
     letter-spacing: 0.6px;
     color: #788994;
-    padding: 2px 0 1px 1px;
+    padding: 3px 0 0 1px;
     margin-bottom: 10px;
   }
 

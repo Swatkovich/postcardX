@@ -17,11 +17,13 @@ const StyledTextAlignTab = styled.div`
 
   div:first-of-type {
     border-radius: 4px 0 0 4px;
+    margin-left: 0px;
   }
 
   div:last-of-type {
     border-radius: 0 4px 4px 0;
     margin-right: 0px;
+    padding-left: 1px;
   }
 `;
 
@@ -79,37 +81,22 @@ class TextAlignTab extends React.PureComponent<TabProps, TabState> {
   render() {
     return (
       <StyledTextAlignTab>
-        <StyledTabElement
-          // id="left"
-          // className={`${this.state.value === 'left' ? 'active' : 'unactive'}`}
-          onClick={this.handleLeftChange}
-        >
+        <StyledTabElement onClick={this.handleLeftChange}>
           <LeftAlignIcon
             fill={this.state.value === 'left' ? '#2198ed' : '#aab2bb80'}
           />
         </StyledTabElement>
-        <StyledTabElement
-          // className={`${this.state.value === 'center' ? 'active' : 'unactive'}`}
-          onClick={this.handleCenterChange}
-        >
+        <StyledTabElement onClick={this.handleCenterChange}>
           <CenterAlignIcon
             fill={this.state.value === 'center' ? '#2198ed' : '#aab2bb80'}
           />
         </StyledTabElement>
-        <StyledTabElement
-          // className={`${this.state.value === 'right' ? 'active' : 'unactive'}`}
-          onClick={this.handleRightChange}
-        >
+        <StyledTabElement onClick={this.handleRightChange}>
           <RightAlignIcon
             fill={this.state.value === 'right' ? '#2198ed' : '#aab2bb80'}
           />
         </StyledTabElement>
-        <StyledTabElement
-          // className={`${
-          //   this.state.value === 'justify' ? 'active' : 'unactive'
-          // }`}
-          onClick={this.handleJustifyChange}
-        >
+        <StyledTabElement onClick={this.handleJustifyChange}>
           <JustifyAlignIcon
             fill={this.state.value === 'justify' ? '#2198ed' : '#aab2bb80'}
           />

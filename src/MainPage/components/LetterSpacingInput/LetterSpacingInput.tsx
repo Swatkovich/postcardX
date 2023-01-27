@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ReactComponent as LetterSpacingIcon } from '../../../assets/svg/letter-spacing.svg';
+import { ReactComponent as PxIcon } from '../../../assets/svg/px.svg';
+
 import { InputProps, InputState } from '../../interface';
 
 const StyledLetterSpacingInput = styled.input`
@@ -14,6 +17,8 @@ const StyledLetterSpacingInput = styled.input`
   line-height: 14.4px;
   font-weight: 400;
   font-family: Fira Sans;
+  padding-left: 35px;
+  margin-left: -1px;
 `;
 
 class LetterSpacingInput extends React.PureComponent<InputProps, InputState> {
@@ -32,11 +37,29 @@ class LetterSpacingInput extends React.PureComponent<InputProps, InputState> {
 
   render() {
     return (
-      <StyledLetterSpacingInput
-        name="letterSpacing"
-        onChange={this.handleInputChange}
-        value={this.state.value}
-      />
+      <>
+        <LetterSpacingIcon
+          style={{
+            position: 'relative',
+            alignSelf: 'center',
+            left: '9px',
+            marginRight: '-16px',
+          }}
+        />
+        <StyledLetterSpacingInput
+          name="letterSpacing"
+          onChange={this.handleInputChange}
+          value={this.state.value}
+        />
+        <PxIcon
+          style={{
+            position: 'relative',
+            top: '17px',
+            right: '11px',
+            marginLeft: '-12px',
+          }}
+        />
+      </>
     );
   }
 }

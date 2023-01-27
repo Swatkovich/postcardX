@@ -1,7 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ReactComponent as VectorIcon } from '../../../assets/svg/vector.svg';
+
 import { InputProps, InputState } from '../../interface';
+
+const StyledColorSelectContainer = styled.div`
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  margin-bottom: 10px;
+`;
 
 const StyledColorSelect = styled.select`
   background-color: #ffffff;
@@ -13,9 +22,21 @@ const StyledColorSelect = styled.select`
   line-height: 14.4px;
   font-weight: 400;
   font-family: Fira Sans;
-  margin-bottom: 10px;
+  padding-left: 39px;
+  padding-bottom: 1px;
+  -webkit-appearance: none;
 `;
 
+const StyledColorIndicator = styled.div`
+  position: relative;
+  align-self: center;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: ${(props) => props.color};
+  margin-right: -18px;
+`;
 class ColorSelect extends React.PureComponent<InputProps, InputState> {
   constructor(props: InputProps) {
     super(props);
@@ -31,15 +52,27 @@ class ColorSelect extends React.PureComponent<InputProps, InputState> {
 
   render() {
     return (
-      <StyledColorSelect
-        value={this.state.value}
-        name="color"
-        onChange={this.handleSelectChange}
-      >
-        <option value="#292929">#292929</option>
-        <option value="#ff0066">#ff0066</option>
-        <option value="#0066ff">#0066ff</option>
-      </StyledColorSelect>
+      <StyledColorSelectContainer>
+        <StyledColorIndicator color={this.state.value} />
+        <StyledColorSelect
+          value={this.state.value}
+          name="color"
+          onChange={this.handleSelectChange}
+          color={this.props.value}
+        >
+          <option value="#292929">#292929</option>
+          <option value="#ff0066">#ff0066</option>
+          <option value="#0066ff">#0066ff</option>
+        </StyledColorSelect>
+        <VectorIcon
+          style={{
+            position: 'relative',
+            top: '17px',
+            right: '10px',
+            marginLeft: '-9px',
+          }}
+        />
+      </StyledColorSelectContainer>
     );
   }
 }

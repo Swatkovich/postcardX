@@ -22,8 +22,8 @@ class MainPage extends React.PureComponent<{}, TextState> {
       fontSize: '14',
       fontWeight: 'Bold',
       color: '#292929',
-      lineHeight: '125%',
-      letterSpacing: '0.6px',
+      lineHeight: '125',
+      letterSpacing: '0.6',
       textAlign: 'left',
     };
   }
