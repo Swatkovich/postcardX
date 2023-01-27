@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c3786475.css",
+    "main.js": "/static/js/main.f2e891c7.js",
+    "static/media/percentage.svg": "/static/media/percentage.03ca5e422dd41a7accc6bacc4b7aaf7e.svg",
+    "static/media/px.svg": "/static/media/px.27380e8771531da4951742e5d71e7fd4.svg",
+    "index.html": "/index.html",
+    "static/media/letter-spacing.svg": "/static/media/letter-spacing.0f380a2f9c3e6ca94cdd27f2fc2fbb0c.svg",
+    "static/media/line-height.svg": "/static/media/line-height.aca2999d352fc34bcf9f13f2afc778f6.svg",
+    "static/media/font-size.svg": "/static/media/font-size.172e256d4cf00b603d9a7128cb243673.svg",
+    "static/media/vector.svg": "/static/media/vector.2da5102e32890c1fa29a792110c5f862.svg",
+    "static/media/justify-align.svg": "/static/media/justify-align.ec25fb669b4fafc78c53fe5fe9a659fd.svg",
+    "static/media/left-align.svg": "/static/media/left-align.b957357d69b38937935905edc2cdb48a.svg",
+    "static/media/right-align.svg": "/static/media/right-align.497f31969560f3b47c4012683e48b3e1.svg",
+    "static/media/center-align.svg": "/static/media/center-align.84b8f586986742d6843ef2026d32cd18.svg",
+    "main.c3786475.css.map": "/static/css/main.c3786475.css.map",
+    "main.f2e891c7.js.map": "/static/js/main.f2e891c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3786475.css",
+    "static/js/main.f2e891c7.js"
+  ]
+}
